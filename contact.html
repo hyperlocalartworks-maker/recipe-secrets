@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Recipe Secrets Restaurant</title>
+  <meta name="description" content="Contact Recipe Secrets Restaurant: address, phone, email, opening hours, map, and a contact form for questions and feedback." />
+  <meta property="og:title" content="Contact Recipe Secrets Restaurant" />
+  <meta property="og:description" content="Address, phone, email, hours, and a contact form." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://picsum.photos/seed/recipesecretscontact/1200/630" />
+  <meta property="og:url" content="https://example.com/contact.html" />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav-bar" aria-label="Primary">
+      <a class="brand" href="index.html"><span class="brand-mark">&#9733;</span> Recipe Secrets</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle navigation menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-menu" id="primary-menu" hidden>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="specials.html">Specials</a></li>
+        <li><a href="reservation.html">Reservations</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p class="tagline">We'd love to hear from you.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid">
+        <div>
+          <h2>Visit Us</h2>
+          <!-- TODO: confirm address, phone, email, and hours with restaurant owner -->
+          <ul class="info-list">
+            <li><strong>Address:</strong> 482 Hawthorne Lane, Millbrook Heights, OH 44118</li>
+            <li><strong>Phone:</strong> <a href="tel:+14405550192">(440) 555-0192</a></li>
+            <li><strong>Email:</strong> <a href="mailto:hello@recipesecretsrestaurant.com">hello@recipesecretsrestaurant.com</a></li>
+            <li><strong>Monday:</strong> Closed</li>
+            <li><strong>Tuesday &ndash; Thursday:</strong> 5:00 PM &ndash; 9:00 PM</li>
+            <li><strong>Friday &ndash; Saturday:</strong> 5:00 PM &ndash; 10:00 PM</li>
+            <li><strong>Sunday:</strong> 4:00 PM &ndash; 9:00 PM</li>
+          </ul>
+
+          <div class="map-wrapper mt-2">
+            <!-- TODO: replace with the real embedded Google Map for the final address -->
+            <iframe
+              title="Map showing the location of Recipe Secrets Restaurant"
+              src="https://www.google.com/maps?q=Millbrook+Heights+OH&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+
+        <div>
+          <h2>Send Us a Message</h2>
+          <!-- TODO: replace YOUR_FORM_ID with your real Formspree form ID -->
+          <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-ajax-form novalidate>
+            <div class="form-row">
+              <label for="contact-name">Name <span class="required-mark">*</span></label>
+              <input type="text" id="contact-name" name="name" autocomplete="name" required />
+            </div>
+            <div class="form-row">
+              <label for="contact-email">Email <span class="required-mark">*</span></label>
+              <input type="email" id="contact-email" name="email" autocomplete="email" required />
+            </div>
+            <div class="form-row">
+              <label for="message">Message <span class="required-mark">*</span></label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <!-- Honeypot field: hidden from real users, bots may fill it in -->
+            <div class="honeypot-field" aria-hidden="true">
+              <label for="_gotcha2">Leave this field blank</label>
+              <input type="text" id="_gotcha2" name="_gotcha" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <div class="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2>Recipe Secrets</h2>
+          <p>482 Hawthorne Lane<br />Millbrook Heights, OH 44118</p>
+        </div>
+        <div>
+          <h2>Contact</h2>
+          <p><a href="tel:+14405550192">(440) 555-0192</a><br /><a href="mailto:hello@recipesecretsrestaurant.com">hello@recipesecretsrestaurant.com</a></p>
+        </div>
+        <div>
+          <h2>Quick Links</h2>
+          <p>
+            <a href="about.html">About</a><br />
+            <a href="specials.html">Specials</a><br />
+            <a href="reservation.html">Reservations</a>
+          </p>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 2026 Recipe Secrets Restaurant. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

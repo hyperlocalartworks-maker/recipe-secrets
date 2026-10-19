@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Specials | Recipe Secrets Restaurant</title>
+  <meta name="description" content="See this week's specials at Recipe Secrets Restaurant, including prices and dietary tags for vegetarian, vegan, spicy, and gluten-free dishes." />
+  <meta property="og:title" content="Specials at Recipe Secrets Restaurant" />
+  <meta property="og:description" content="This week's family-recipe specials, with prices and dietary tags." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://picsum.photos/seed/recipesecretsspecials/1200/630" />
+  <meta property="og:url" content="https://example.com/specials.html" />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav-bar" aria-label="Primary">
+      <a class="brand" href="index.html"><span class="brand-mark">&#9733;</span> Recipe Secrets</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle navigation menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-menu" id="primary-menu" hidden>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="specials.html" aria-current="page">Specials</a></li>
+        <li><a href="reservation.html">Reservations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <h1>This Week's Specials</h1>
+        <p class="tagline">Family recipes, one plate at a time.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-- TODO: confirm current specials and prices with restaurant owner -->
+        <p class="text-center">Specials rotate weekly. Dietary tags are shown on each card &mdash; please tell your server about any allergies.</p>
+        <div id="specials-grid" class="grid grid-3 mt-2" aria-live="polite">
+          <!-- Cards are rendered by js/main.js using the data in js/specials.js -->
+          <p>Loading specials&hellip;</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2>Recipe Secrets</h2>
+          <p>482 Hawthorne Lane<br />Millbrook Heights, OH 44118</p>
+        </div>
+        <div>
+          <h2>Contact</h2>
+          <p><a href="tel:+14405550192">(440) 555-0192</a><br /><a href="mailto:hello@recipesecretsrestaurant.com">hello@recipesecretsrestaurant.com</a></p>
+        </div>
+        <div>
+          <h2>Quick Links</h2>
+          <p>
+            <a href="about.html">About</a><br />
+            <a href="specials.html">Specials</a><br />
+            <a href="reservation.html">Reservations</a>
+          </p>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 2026 Recipe Secrets Restaurant. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/specials.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

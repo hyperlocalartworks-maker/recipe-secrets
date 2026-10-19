@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reservations | Recipe Secrets Restaurant</title>
+  <meta name="description" content="Request a reservation at Recipe Secrets Restaurant. Choose your date, time, and party size, and let us know about any special requests." />
+  <meta property="og:title" content="Reserve a Table at Recipe Secrets Restaurant" />
+  <meta property="og:description" content="Request a reservation online and we'll confirm by phone or email." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://picsum.photos/seed/recipesecretsreserve/1200/630" />
+  <meta property="og:url" content="https://example.com/reservation.html" />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav-bar" aria-label="Primary">
+      <a class="brand" href="index.html"><span class="brand-mark">&#9733;</span> Recipe Secrets</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle navigation menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-menu" id="primary-menu" hidden>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="specials.html">Specials</a></li>
+        <li><a href="reservation.html" aria-current="page">Reservations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <h1>Reserve a Table</h1>
+        <p class="tagline">We'll confirm your request by phone or email.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-- TODO: replace YOUR_FORM_ID with your real Formspree form ID -->
+        <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-ajax-form novalidate>
+          <div class="form-row-group form-row-group-2">
+            <div class="form-row">
+              <label for="res-name">Full name <span class="required-mark">*</span></label>
+              <input type="text" id="res-name" name="name" autocomplete="name" required />
+            </div>
+            <div class="form-row">
+              <label for="res-email">Email <span class="required-mark">*</span></label>
+              <input type="email" id="res-email" name="email" autocomplete="email" required />
+            </div>
+          </div>
+
+          <div class="form-row-group form-row-group-2">
+            <div class="form-row">
+              <label for="res-phone">Phone <span class="required-mark">*</span></label>
+              <input type="tel" id="res-phone" name="phone" autocomplete="tel" pattern="^[0-9 ()+\-]{7,20}$" required />
+              <p class="hint">Digits, spaces, parentheses, + and - only.</p>
+            </div>
+            <div class="form-row">
+              <label for="guests">Number of guests <span class="required-mark">*</span></label>
+              <input type="number" id="guests" name="guests" min="1" max="20" step="1" required />
+            </div>
+          </div>
+
+          <div class="form-row-group form-row-group-2">
+            <div class="form-row">
+              <label for="date">Date <span class="required-mark">*</span></label>
+              <input type="date" id="date" name="date" required />
+            </div>
+            <div class="form-row">
+              <label for="time">Time <span class="required-mark">*</span></label>
+              <input type="time" id="time" name="time" min="16:00" max="22:00" required />
+              <p class="hint">We serve dinner from 4:00 PM to 10:00 PM.</p>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="requests">Special requests</label>
+            <textarea id="requests" name="requests" rows="4" placeholder="Allergies, celebrations, accessibility needs, etc."></textarea>
+          </div>
+
+          <!-- Honeypot field: hidden from real users, bots may fill it in -->
+          <div class="honeypot-field" aria-hidden="true">
+            <label for="_gotcha">Leave this field blank</label>
+            <input type="text" id="_gotcha" name="_gotcha" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <button type="submit" class="btn btn-primary">Request Reservation</button>
+          <div class="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2>Recipe Secrets</h2>
+          <p>482 Hawthorne Lane<br />Millbrook Heights, OH 44118</p>
+        </div>
+        <div>
+          <h2>Contact</h2>
+          <p><a href="tel:+14405550192">(440) 555-0192</a><br /><a href="mailto:hello@recipesecretsrestaurant.com">hello@recipesecretsrestaurant.com</a></p>
+        </div>
+        <div>
+          <h2>Quick Links</h2>
+          <p>
+            <a href="about.html">About</a><br />
+            <a href="specials.html">Specials</a><br />
+            <a href="reservation.html">Reservations</a>
+          </p>
+        </div>
+      </div>
+      <p class="footer-bottom">&copy; 2026 Recipe Secrets Restaurant. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
