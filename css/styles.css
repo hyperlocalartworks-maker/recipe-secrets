@@ -70,15 +70,15 @@ h3 {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.4rem;
 }
 
 h2 {
-  font-size: 1.6rem;
+  font-size: 1.9rem;
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 p {
@@ -280,7 +280,7 @@ select:focus-visible {
 
 .hero h1 {
   color: var(--color-white);
-  font-size: 2.2rem;
+  font-size: 2.6rem;
 }
 
 .hero .tagline {
@@ -298,7 +298,7 @@ select:focus-visible {
 
 @media (min-width: 600px) {
   .hero h1 {
-    font-size: 2.8rem;
+    font-size: 3.2rem;
   }
 }
 
