@@ -13,6 +13,7 @@
   --color-gold: #c9a24b;
   --color-gold-light: #e4c77f;
   --color-yellow: #ffd700;
+  --color-red: #e63946;
   --color-white: #ffffff;
   --color-error: #a3262c;
   --color-success: #2f6b3a;
@@ -281,6 +282,10 @@ select:focus-visible {
 .hero h1 {
   color: var(--color-white);
   font-size: 2.6rem;
+}
+
+.hero-title-home {
+  color: var(--color-red);
 }
 
 .hero .tagline {
