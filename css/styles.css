@@ -12,6 +12,7 @@
   --color-charcoal: #2b2523;
   --color-gold: #c9a24b;
   --color-gold-light: #e4c77f;
+  --color-yellow: #ffd700;
   --color-white: #ffffff;
   --color-error: #a3262c;
   --color-success: #2f6b3a;
@@ -141,7 +142,7 @@ select:focus-visible {
   gap: 0.5rem;
   font-family: var(--font-heading);
   font-size: 1.3rem;
-  color: var(--color-cream);
+  color: var(--color-yellow);
   font-weight: 700;
 }
 
